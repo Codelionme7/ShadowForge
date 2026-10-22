@@ -1,4 +1,4 @@
-"""Amazon Bedrock integration for generating executive Shadow CFO voice memos (with zero-key offline fallback)."""
+"""Amazon Bedrock integration for generating executive Shadow CFO voice memos."""
 
 from __future__ import annotations
 import os
@@ -8,11 +8,6 @@ from botocore.exceptions import BotoCoreError, ClientError
 
 
 def generate_bedrock_cfo_memo(simulation_result: dict[str, Any]) -> dict[str, Any]:
-    """
-    Generate an executive Alexa+ voice briefing using Amazon Bedrock (Amazon Nova / Claude)
-    when AWS credentials are configured, or fall back to deterministic local synthesis
-    so offline hackathon judging always succeeds without errors.
-    """
     region = os.getenv("AWS_REGION", "us-east-1")
     model_id = os.getenv("BEDROCK_MODEL_ID", "amazon.nova-micro-v1:0")
 
