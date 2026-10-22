@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "shadowforge": {
+      "command": "shadowforge",
+      "args": []
+    }
+  }
+}
