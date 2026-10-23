@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "shadowforge"
 version = "0.2.0"
-description = "ShadowForge - Adversarial Shadow CFO for African Financial Decisions"
+description = "ShadowForge - Adversarial Shadow CFO for African Financial Decisions (Alexa+ & AWS Bedrock MCP)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -25,9 +25,6 @@ dev = [
 
 [project.scripts]
 shadowforge = "shadowforge.server:main"
-
-[tool.setuptools]
-package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]

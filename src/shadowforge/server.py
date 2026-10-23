@@ -26,7 +26,7 @@ def run_shadow_cfo(
     shock_id: str | None = None,
     currency: str = "KES",
 ) -> str:
-    """Run Monte-Carlo stress simulation and return metrics + AWS Bedrock CFO voice memo."""
+    """Run adversarial Monte-Carlo simulation and return JSON telemetry + Bedrock CFO memo."""
     sim = run_simulation(
         monthly_income=monthly_income,
         monthly_expenses=monthly_expenses,
@@ -41,7 +41,7 @@ def run_shadow_cfo(
 
 
 @mcp.tool()
-def build_resilience_plan(
+def get_resilience_plan(
     monthly_income: float,
     monthly_expenses: float,
     savings: float,
@@ -50,7 +50,7 @@ def build_resilience_plan(
     shock_id: str | None = None,
     currency: str = "KES",
 ) -> str:
-    """Calculate exact monthly expense cut or savings boost required to achieve target survival."""
+    """Compute exact monthly expense cut or savings buffer needed to reach target survival."""
     plan = calculate_resilience_plan(
         monthly_income=monthly_income,
         monthly_expenses=monthly_expenses,
@@ -64,14 +64,14 @@ def build_resilience_plan(
 
 
 @mcp.tool()
-def compare_african_shocks(
+def compare_shock_vulnerabilities(
     monthly_income: float,
     monthly_expenses: float,
     savings: float,
     months: int = 12,
     currency: str = "KES",
 ) -> str:
-    """Rank financial vulnerability across all calibrated African macroeconomic shocks."""
+    """Compare financial survival across all 5 calibrated African macroeconomic shocks."""
     comp = compare_all_shocks(
         monthly_income=monthly_income,
         monthly_expenses=monthly_expenses,

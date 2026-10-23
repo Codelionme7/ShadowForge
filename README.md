@@ -2,4 +2,4 @@
 
 **Adversarial Shadow CFO for African Financial Decisions (Alexa+ & AWS Bedrock MCP)**
 
-ShadowForge runs vectorized Monte-Carlo personal and SME finance stress tests across calibrated African macroeconomic shocks and synthesizes executive voice briefings via Amazon Bedrock.
+ShadowForge stress-tests personal and SME finances against calibrated African macroeconomic shocks using vectorized Monte-Carlo simulation and reverse bisection solvers, delivering executive voice briefings for Amazon Alexa+ via Model Context Protocol (MCP) and AWS Bedrock.

@@ -27,7 +27,7 @@ def run_simulation(
     seed: int = 42,
 ) -> dict[str, Any]:
     """
-    Run adversarial Monte-Carlo paths using Argon Compute vectorized NumPy operations.
+    Run adversarial Monte-Carlo paths using vectorized NumPy operations.
     Returns survival probability, ruin risk, and distribution percentiles.
     """
     if monthly_income < 0:
@@ -123,7 +123,7 @@ def run_simulation(
         "verdict": verdict_text,
         "mitigation_tip": mitigation_tip,
         "voice_briefing": (
-            f"Under {shock_used_name}, your 12-month survival rate is {surv_pct}% "
+            f"Under {shock_used_name}, your {months}-month survival rate is {surv_pct}% "
             f"with a median ending balance of {float(p50):,.0f} {currency}. "
             f"Recommendation: {mitigation_tip}"
         ),
