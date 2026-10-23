@@ -2,7 +2,12 @@
 
 from __future__ import annotations
 import json
-from mcp.server.fastmcp import FastMCP
+
+try:
+    from mcp.server.fastmcp import FastMCP
+except ImportError:
+    from mcp.server.mcpserver import MCPServer as FastMCP
+
 from .aws_bedrock import generate_bedrock_cfo_memo
 from .engine import calculate_resilience_plan, compare_all_shocks, run_simulation
 from .scenarios import list_shocks
